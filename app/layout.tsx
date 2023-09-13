@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { Montserrat } from "next/font/google";
+
+const monserrat = Montserrat({subsets: ['latin']})
 
 const HomeLayout = ({
     children
@@ -6,7 +9,7 @@ const HomeLayout = ({
     children: React.ReactNode
 }) => {
   return (
-    <html>
+    <html className={monserrat.className}>
         <body>
             {children}
         </body>
