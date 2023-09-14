@@ -1,0 +1,9 @@
+@import 'utils';
+.todosNav {
+    width: 8rem;
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+    gap: $gapSm;
+    border-right: 2px solid $color;
+}

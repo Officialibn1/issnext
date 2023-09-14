@@ -1,0 +1,9 @@
+.noteCard {
+    border-radius: $borderRadius;
+    background: $color;
+    color: $bgColor;
+    padding: $cardPadding;
+    margin: $smMargin $mdMargin;
+    width: $cardWidth;
+    min-height: $cardHeight;
+}

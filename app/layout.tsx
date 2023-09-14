@@ -1,6 +1,7 @@
 import '../styles/globals.scss'
 import React from 'react';
 import { Montserrat } from "next/font/google";
+import Header from './Header';
 
 const monserrat = Montserrat({subsets: ['latin']})
 
@@ -12,6 +13,8 @@ const HomeLayout = ({
   return (
     <html className={monserrat.className}>
         <body>
+            {/* Layout Header */}
+            <Header />
             {children}
         </body>
     </html>
