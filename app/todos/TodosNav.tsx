@@ -18,7 +18,7 @@ const TodosNav = async () => {
   return (
     <nav className={TodosNavStyles.todosNav}>
         {todoLinks.map(todo => (
-            <Link href={`/`} key={todo.id}>
+            <Link href={`/todos/${todo.id}`} key={todo.id}>
                 <p>Todo: {todo.id}</p>
             </Link>
         ))}

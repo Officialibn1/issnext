@@ -10,15 +10,13 @@ type Todo = {
 
 export const getTodos = async () => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/todos/`);
-    const todos = await res.json()
+    const todos: Todo[] = await res.json()
 
     return todos
 }
 
 
 const Todos = async () => {
-    const todos: Todo[] = await getTodos()
-    
     
     return (
         <div className='todos'>

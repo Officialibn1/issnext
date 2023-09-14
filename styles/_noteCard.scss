@@ -6,4 +6,13 @@
     margin: $smMargin $mdMargin;
     width: $cardWidth;
     min-height: $cardHeight;
+
+    p {
+        margin: $smMargin 0;
+
+        a {
+            color: darken($color: $color, $amount: 20);
+            font-size: $fontSize;
+        }
+    }
 }

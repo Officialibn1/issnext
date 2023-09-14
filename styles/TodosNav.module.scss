@@ -6,4 +6,6 @@
     flex-direction: column;
     gap: $gapSm;
     border-right: 2px solid $color;
+    height: calc(100vh - 4.1rem);
+    overflow: auto;
 }
