@@ -1,3 +1,5 @@
+@import 'utils';
+
 * {
   padding: 0;
   margin: 0;
@@ -10,4 +12,5 @@
 body {
   max-width: 1740px;
   margin: 0 auto;
+  color: $color;
 }

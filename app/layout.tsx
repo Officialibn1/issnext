@@ -1,3 +1,4 @@
+import '../styles/globals.scss'
 import React from 'react';
 import { Montserrat } from "next/font/google";
 
