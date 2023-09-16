@@ -1,0 +1,38 @@
+@import 'utils';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    max-width: 1800px;
+    margin: 0 auto;
+    color: $textColor;
+}
+
+.card {
+    padding: $paddingMd;
+    margin: $marginMd;
+    box-shadow: $boxShadow;
+    min-height: 8rem;
+    min-width: 10rem;
+
+    h1 {
+        font-weight: 500;
+        font-size: $textLg;
+    }
+}
+
+.section {
+    padding: $paddingSm;
+
+    h1 {
+        font-weight: 600;
+    }
+}
