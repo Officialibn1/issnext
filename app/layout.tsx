@@ -7,10 +7,12 @@ const monteserrat = Montserrat({subsets: ['vietnamese']});
 
 const HomeLayout = ({ children }: { children: React.ReactNode}) => {
   return (
-    <div style={monteserrat.style}>
-        <NavBar />
-        {children}
-    </div>
+    <html lang='en'>
+      <body style={monteserrat.style}>
+          <NavBar />
+          {children}
+      </body>
+    </html>
   )
 }
 
