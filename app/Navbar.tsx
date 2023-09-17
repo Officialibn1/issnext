@@ -11,7 +11,7 @@ const NavBar = () => {
                 <div className="logo">
                     {/* <!-- Logo Image --> */}
                     <div className="logoImg">
-                        <Image src="img/isslogobig.png" alt="isslogobig"/>
+                        <Image src="/isslogobig.png" alt="isslogobig" width={60} height={60}/>
                     </div>
                     
                     {/* <!-- Logo Text --> */}
