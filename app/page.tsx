@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import OurServices from './OurServices'
+import Testimonials from './Testimonials'
 
 const HomePage = () => {
   return (
@@ -11,6 +12,8 @@ const HomePage = () => {
         <div className="gap"></div>
 
         <OurServices />
+
+        <Testimonials />
     </>
   )
 }
