@@ -3,6 +3,7 @@ import Header from './Header'
 import OurServices from './OurServices'
 import Testimonials from './Testimonials'
 import ContactUs from './ContactUs'
+import Footer from './Footer'
 
 const HomePage = () => {
   return (
@@ -17,6 +18,8 @@ const HomePage = () => {
         <Testimonials />
 
         <ContactUs />
+
+        <Footer />
     </>
   )
 }
