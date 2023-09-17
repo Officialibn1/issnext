@@ -1,4 +1,8 @@
 import '../styles/Globals.scss';
+import NavBar from './Navbar';
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({subsets: ['vietnamese']});
 
 export const metadata = {
   title: 'ISS (Internet Service Studio)',
@@ -12,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body style={montserrat.style}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   )
 }
