@@ -1,0 +1,59 @@
+.contactUs {
+    width: 100%;
+
+    .formContainer {
+        // border: 2px solid #000;
+        width: 100%;
+        max-width: 750px;
+        margin: 4rem auto;
+        padding: 0 3rem;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .inputFieldContainer {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                label {
+                    font-size: $subHeadinfFont;
+                    font-weight: $subHeadinfFontW;
+                    color: $logoColor;
+                }
+
+                input {
+                    padding: .5rem 0;
+                    outline: none;
+                    border: none;
+                    border-bottom: 2px solid $logoColor;
+                }
+
+                textarea {
+                    border: 2px solid $logoColor;
+                    min-height: 200px;
+                    outline: none;
+                    padding: 10px;
+                }
+            }
+
+            button {
+                font-size: $subHeadinfFont;
+                font-weight: $subHeadinfFontW;
+                color: $logoColor;
+                padding: .5rem;
+                border: 2px solid $logoColor;
+                outline: none;
+                background: transparent;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $logoColor;
+                    color: $textColor2;
+                }
+            }
+        }
+    }
+}

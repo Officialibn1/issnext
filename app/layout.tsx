@@ -1,19 +1,18 @@
-import React from 'react'
 import '../styles/Globals.scss';
-import { Montserrat } from "next/font/google";
-import NavBar from './NavBar';
 
-const monteserrat = Montserrat({subsets: ['vietnamese']});
+export const metadata = {
+  title: 'ISS (Internet Service Studio)',
+  description: 'Designed by Ibn',
+}
 
-const HomeLayout = ({ children }: { children: React.ReactNode}) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang='en'>
-      <body style={monteserrat.style}>
-          <NavBar />
-          {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   )
 }
-
-export default HomeLayout

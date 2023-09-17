@@ -1,21 +1,163 @@
-$textFont: 18px;
-$textMd: 25px;
-$textLg: 30px;
+// Paddings
+$mainPadding: 40px 60px;
+$mainPaddingMobile: 40px 20px;
+$navPadding: 10px 60px;
+$mobileNavPadding: 10px 20px;
+$cardPadding: 2rem;
+$cardPaddingMax: 35px;
+$linkPadding: .5rem 1.5rem;
 
-$borderColor: 2px solid salmon;
+// Borders
+$cardBorderWidth: 1.5px;
+$linkBorderWidth: 2px;
 
-$background: #bae6fd;
-$textColor: #082f49;
+// Gaps
+$normalGap: 1rem;
+$listGap: 2rem;
 
-$paddingSm: 1rem 2rem;
-$paddingMd: 2rem 3rem;
+// Colors
+$logoColor: #1a2b6d;
+$textColor: #1a358e;
+$textColor2: #f2f2f2;
+$backgroundColor: #fff;
+$cardBackground: #f2f2f2;
 
-$marginSm: 1rem 2rem;
-$marginMd: 2rem 3rem;
+// Utility Widths
+$spanWidth: 300px;
 
-$gapSm: 1rem;
-$gapMd: 1.5rem;
+// Card Container Styles
+%cardItemsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 
-$borderRadius: 1rem;
+    > div {
+        flex: 1;
+        text-align: center;
+        width: 100%;
+        min-width: 300px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
 
-$boxShadow: 0 0 1rem 0 #082f49;
+%cardListItem {
+    background: $cardBackground;
+    padding: $cardPadding;
+    position: relative;
+
+    h1 {
+        color: $logoColor;
+        font-weight: $headingFontW;
+        margin: 1rem 0;
+    }
+
+    h3 {
+        color: $logoColor;
+        font-weight: $headingFontW;
+        margin: .5rem 0;
+        border-bottom: 2px solid $logoColor;
+    }
+
+    p {
+        color: $textColor;
+        line-height: $textLineHeight;
+        font-size: $pFont;
+        font-weight: $pFontW;
+    }
+
+    i {
+        color: $textColor;
+        // z-index: 4;
+        font-size: 4rem;
+        position: absolute;
+        right: 25px;
+        top: -35px;
+    }
+}
+
+%cardListItemBorder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -1rem;
+    bottom: -1rem;
+    border: 3px solid $cardBackground;
+    z-index: -5;
+}
+
+
+
+.container {
+    padding: $mainPadding;
+
+    @media screen and (max-width: 630px) {
+        padding: $mainPaddingMobile;
+    }
+}
+
+.gap {
+    height: 16rem;
+    width: 100%;
+    background: $backgroundColor;
+}
+
+.sectionHeader {
+    background: $logoColor;
+    color: $textColor2;
+    min-height: 16rem;
+    width: 100%;
+
+    > div {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        min-height: 16rem;
+    }
+
+    h1 {
+        font-size: $largeFont;
+        font-weight: $headingFontW;
+        margin: 2rem 0;
+    }
+
+    p {
+        font-size: $pFont;
+        font-weight: $pFontW;
+    }
+    
+    h2 {
+        font-weight: $headingFontW;
+        font-size: $pageHeaderFont;
+        margin: auto 0;
+    }
+
+    .pageHeadingContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto 0;
+        min-height: 16rem;
+
+    }
+}
+
+.pageNavigationLink {
+    // padding: $navPadding;
+    padding: 2rem 0;
+    // border: 2px solid #000;
+    text-align: center;
+    a {
+        background-color: $textColor;
+        padding: $linkPadding;
+        color: $textColor2;
+        // border-radius: .5rem;
+        transition: background-color 200ms ease;
+
+        &:hover {
+            background-color: lighten($color: $textColor, $amount: 10);
+        }
+    }
+}

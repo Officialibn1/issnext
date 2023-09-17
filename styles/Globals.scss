@@ -1,60 +1,287 @@
+@import 'font';
+@import 'reset';
 @import 'utils';
+// Header Partial Import
+@import 'header';
+// Our services partial import
+@import 'ourServices';
+// Testimonials partial import
+@import 'testimonials';
+// Contact Us partial import
+@import 'contactUs';
+// About Us partial import
+@import 'aboutUs';
+
+// Icon Animation
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Adjust the bounce height as needed */
+    }
+}
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    list-style: none;
+    font-family: $defaultFont;
     text-decoration: none;
+    list-style: none;
 }
 
 body {
-    max-width: 1800px;
-    margin: 0 auto;
-    color: $textColor;
-}
+    max-width: 1920px;
 
-.card {
-    padding: $paddingMd;
-    margin: $marginMd;
-    box-shadow: $boxShadow;
-    min-height: 15rem;
-    min-width: 25rem;
-    border-radius: $borderRadius;
-    background: $background;
-
-    h1 {
-        font-weight: 500;
-        font-size: $textLg;
-    }
-
-    p {
-        font-size: $textMd;
-        margin: .5rem 0;
+    > div {
+        width: 100%;
     }
 }
 
-.section {
-    padding: $paddingSm;
 
-    h1 {
-        font-weight: 600;
-    }
-}
+// Nav Styles
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: $navPadding;
 
-.sideNav {
-    width: 15%;
-    height: calc(100vh - 4.5rem);
-    
-    ul {
-        border-right: 2px solid $textColor;
-        padding: $paddingSm;
+    // Logo Stylings
+    .logo {
         display: flex;
-        gap: $gapMd;
-        flex-direction: column;
-        overflow-x: auto;
-        height: 100%;
+        // height: 80px;
+        position: fixed;
+        left: 20px;
+        top: 10px;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 150px;
+        z-index: 6;
+        // border: 2px solid #000;
+        // background: #fff;
+
+        span {
+            font-size: $headingFont;
+            font-weight: $logoFontW;
+            color: $logoColor;
+        }
+
+        .logoImg {
+            height: 60px;
+            width: 60px;
+            margin: auto 0;
+
+            img {
+                width: 100%;
+            }
+        }
+        
+    }
+    
+    // Nav Links styling
+    .navLinks {
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: $listGap;
+
+            li {
+
+                a {
+                    color: $textColor;
+                    font-weight: $subHeadinfFontW;
+                    font-size: $navLinksFont;
+                }
+            }
+        }
+    }
+
+    // Mobile Nav open button
+    .navOpen {
+        display: none;
+
+        i {
+            font-size: 2.5rem;
+            margin: auto;
+            color: $logoColor;
+        }
+    }
+
+    .mobileNavLinksContainer {
+        width: 0;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: #1a358e61;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .navLinks {
+            display: none;
+        }
+        .navOpen {
+            width: 3.5rem;
+            height: 3.5rem;
+            display: flex;
+            background: $backgroundColor;
+            // border: 2px solid #000;
+            position: fixed;
+            right: 20px;
+            top: 13px;
+            z-index: 6;
+            cursor: pointer;
+        }
+
+        .mobileNavLinksContainer {
+            width: 0;
+            transition: width 300ms ease-in;
+
+            .mobileNavLinks {
+                width: 100%;
+                max-width: 300px;
+                background: $backgroundColor;
+                height: 100%;
+                margin-left: auto;
+                padding: 1.5rem 3rem;
+
+                .navCloseBtn {
+                    padding: 1rem 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    
+                    i {
+                        font-size: 2rem;
+                        cursor: pointer;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: $listGap;
+
+                    li {
+
+                        a {
+                            color: $textColor;
+                            font-weight: $subHeadinfFontW;
+                            font-size: $navLinksFont;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// Footer styles
+footer {
+    position: relative;
+
+    .sectionHeader {
+        padding-bottom: 3rem;
+    }
+    .footerItems {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        margin: 1rem 0;
+        // border: 2px solid #fff;
+        
+        
+        h1  {
+            text-align: center;
+            margin: 0;
+            font-size: $footerFont;
+        }
+
+        a {
+            font-size: $footerFont;
+            color: $textColor2;
+        }
+
+        span {
+            border: 1px solid transparent;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+
+            a {
+                margin: auto;
+                
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+
+        p {
+            font-weight: 200;
+            font-size: 12px;
+        }
+    }
+
+    .backTop {
+        position: absolute;
+        bottom: 10px;
+        right: 20rem;
+
+        i {
+            font-size: 3rem;
+            color: $textColor2;
+        }
+    }
+}
+
+// Chatbot styles
+.chatBotIcon {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    background: $cardBackground;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 1px rgba(26, 43, 109, 0.5);
+    animation: bounce 1s infinite; 
+
+    img {
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    &:hover {
+        animation: none;
+        box-shadow: 0 0 5px 1px rgba(26, 43, 109, 0.3);
+        transition: 200ms ease;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chatBotIcon {
+        width: 60px;
+        height: 60px;
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
     }
 }

@@ -1,0 +1,71 @@
+header {
+    width: 100%;
+    overflow: none;
+
+    
+    .headerBg  {
+        width: 100%;
+        background-image: url('../img/issheading.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: none;
+        // border: 2px solid #000;
+        
+        .headerText {
+            // border: 2px solid #000;
+            background: $cardBackground;
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: none;
+            padding: $cardPaddingMax;
+
+            h1 {
+                font-size: $largeFont;
+                font-weight: $headingFontW;
+                margin-bottom: 10px;
+                line-height: 1.5;
+                color: $logoColor;
+                flex: 1;
+            }
+
+            > div {
+                display: flex;
+                align-items: flex-start;
+                gap: $normalGap;
+                margin: 20px 0;
+                flex: 3;
+                
+                span {
+                    width: $spanWidth;
+                    height: 4px;
+                    background: $logoColor;
+                    margin-top: 10px;
+                }
+                
+                p {
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1.5;
+                    color: $textColor;
+                    word-wrap: break-word;
+                    font-size: $pFont;
+                    font-weight: $pFontW;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                // min-height: 60vh;
+                width: 90vw;
+            }
+        }
+    }
+
+
+}

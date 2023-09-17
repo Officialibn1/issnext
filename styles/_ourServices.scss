@@ -1,0 +1,18 @@
+.ourServices {
+    width: 100%;
+}
+
+
+.servicesListContainer {
+    @extend %cardItemsContainer;
+
+    .servicesListItem {
+        @extend %cardListItem;
+
+        .cardBorder {
+            @extend %cardListItemBorder;
+        }
+
+       
+    }
+}

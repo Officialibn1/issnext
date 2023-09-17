@@ -1,0 +1,55 @@
+.aboutUs {
+
+    .aboutContent {
+        // border: 2px solid #000;
+        
+        .aboutContentHeading {
+            display: flex;
+            justify-content: center;
+            border-top: 2px solid $logoColor;
+
+            h1 {
+                font-size: $largeFont;
+                font-weight: $headingFontW;
+                color: $textColor;
+            }
+        }
+
+        .aboutContentText {
+            max-width: 1000px;
+            margin: 0 auto;
+
+            p {
+                color: $textColor;
+                font-weight: $pFontW;
+                font-size: $pFont;
+                line-height: $textLineHeight;
+                text-align: justify;
+
+                b {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .toolsIcons {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: $mainPadding;
+            // border: 2px solid #000;
+            gap: 1rem;
+            justify-content: center;
+
+            .toolsIconsItem {
+                height: 80px;
+                width: fit-content;
+                // border: 2px solid salmon;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}   

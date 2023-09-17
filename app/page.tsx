@@ -2,9 +2,7 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div className='section'>
-        <h1>Home Page</h1>
-    </div>
+    <div>HomePage</div>
   )
 }
 
