@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import OurServices from './OurServices'
 import Testimonials from './Testimonials'
+import ContactUs from './ContactUs'
 
 const HomePage = () => {
   return (
@@ -14,6 +15,8 @@ const HomePage = () => {
         <OurServices />
 
         <Testimonials />
+
+        <ContactUs />
     </>
   )
 }
