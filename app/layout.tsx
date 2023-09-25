@@ -1,6 +1,8 @@
 import Script from 'next/script';
 import '../styles/Globals.scss';
 import NavBar from './Navbar';
+import Head from 'next/head';
+import Link from 'next/link';
 declare global {
   interface Webchat {
     init: (options: any, id?: string) => void
@@ -42,6 +44,8 @@ declare global {
 export const metadata = {
   title: 'ISS (Internet Service Studio)',
   description: 'Designed by Ibn',
+  rel: 'stylesheet',
+  url: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'
 }
 
 export default function RootLayout({
@@ -51,6 +55,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* <Head>
+        <Link rel="stylesheet" href={'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'} />
+      </Head> */}
       <body>
         <NavBar />
         {children}
