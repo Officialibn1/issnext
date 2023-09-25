@@ -4,7 +4,7 @@ import OurServices from './OurServices'
 import Testimonials from './Testimonials'
 import ContactUs from './ContactUs'
 import Footer from './Footer'
-import Chatbot from './Chatbot'
+// import Chatbot from './Chatbot'
 
 const HomePage = () => {
   return (
@@ -20,7 +20,7 @@ const HomePage = () => {
 
         <ContactUs />
 
-        <Chatbot />
+        {/* <Chatbot /> */}
 
         <Footer />
     </>
