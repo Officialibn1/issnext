@@ -1,8 +1,7 @@
-import Script from 'next/script';
+
 import '../styles/Globals.scss';
+import Chatbot from './Chatbot';
 import NavBar from './Navbar';
-import Head from 'next/head';
-import Link from 'next/link';
 declare global {
   interface Webchat {
     init: (options: any, id?: string) => void
@@ -63,8 +62,7 @@ export default function RootLayout({
       <body>
         <NavBar />
         {children}
-        <Script src="https://cdn.botpress.cloud/webchat/v1/inject.js" />
-        <Script src="https://mediafiles.botpress.cloud/5b9adf49-934c-49b1-b05b-91b3d2d9fd8f/webchat/config.js" defer/>
+        <Chatbot />
       </body>
     </html>
   )
