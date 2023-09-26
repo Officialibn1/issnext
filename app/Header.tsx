@@ -14,7 +14,7 @@ const Header = () => {
                         <p>
                             As an IT & Web3 Service Provider, we excel in delivering cutting-edge solutions tailored to the digital landscape&apos;s evolving demands. Our comprehensive services encompass web development, mobile development, UI/UX design, Database and CMS solutions, and chatbot design. With a team of skilled professionals, we harness the latest technologies to create innovative and user-centric digital experiences, ensuring your business thrives in the ever-evolving digital ecosystem.
                             <br></br>
-                            <a href="/">Find Out More. . .</a>
+                            {/* <a href="/">Find Out More. . .</a> */}
                         </p>
 
                     </div>
