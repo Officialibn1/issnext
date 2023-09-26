@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -23,12 +24,12 @@ const NavBar = () => {
 
             <div className="navLinks">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#ourServices">Our Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#contactUs">Contact Us</a></li>
-                    <li><a href="/about.html">About Us</a></li>
+                    <li><Link href="#">Home</Link></li>
+                    <li><Link href="#ourServices">Our Services</Link></li>
+                    <li><Link href="#testimonials">Testimonials</Link></li>
+                    <li><Link href="#">Projects</Link></li>
+                    <li><Link href="#contactUs">Contact Us</Link></li>
+                    <li><Link href="/about">About Us</Link></li>
                 </ul>
             </div>
 

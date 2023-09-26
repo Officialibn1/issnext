@@ -1,6 +1,7 @@
 
 import '../styles/Globals.scss';
 import Chatbot from './Chatbot';
+import Footer from './Footer';
 import NavBar from './Navbar';
 declare global {
   interface Webchat {
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body>
         <NavBar />
         {children}
+        <Footer />
         <Chatbot />
       </body>
     </html>
